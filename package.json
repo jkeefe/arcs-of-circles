@@ -1,0 +1,19 @@
+{
+  "name": "arcs-of-circles",
+  "version": "1.0.0",
+  "description": "Calculating how best to put a collection of circles into pretty arcs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkeefe/arcs-of-circles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkeefe/arcs-of-circles/issues"
+  },
+  "homepage": "https://github.com/jkeefe/arcs-of-circles#readme"
+}
