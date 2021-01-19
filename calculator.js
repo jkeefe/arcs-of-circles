@@ -1,5 +1,7 @@
+// usage: node calculator.js
+
 let total_circles = 100
-let rings = 3
+let rings = 4
 let circle_diameter = 10
 let gap_between_circles = 2
 let first_arc_radius = 20   // a guess to start with
@@ -36,8 +38,19 @@ while (keep_trying) {
     } else {
         // yes!
         keep_trying = false
-        console.log(`First ring radius is ${first_arc_radius}`)
+        console.log(`\nTotal requested circles: ${total_circles}`)
+        console.log(`Total fit circles ${total_fit_circles}`)
         console.log(`Row array is ${rows_array}`)
+        
+        // check for too many circles in the chart
+        if (total_fit_circles > total_circles) {
+            let difference = total_fit_circles - total_circles
+            rows_array[rows_array.length-1] = rows_array[rows_array.length-1] - difference
+            console.log("\nNOTE! The number of circles that fit nicely in the last row\nputs you over the total lnumber of circles you seek.\n")
+            console.log(`So, subtracting the difference from the last ring\ngives you: ${rows_array}`)
+
+        }
+        
     }
     
     
