@@ -1,0 +1,46 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+
+    <title>Congressional Arc Calculator</title>
+
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    <script src="/ring_calculator.js"></script>
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    
+    <div id="anchor-point">
+    </div>
+    
+    <form>
+      <label for="form_circles">Number of circles:</label>
+      <input type="text" name="circles" id="form_circles" value="538" />
+      
+      <label for="form_rings">Number of rings:</label>
+      <input type="text" name="rings" id="form_rings" value="12" />
+    </form>
+    
+    <button id="calculate">
+      Calculate
+    </button>
+    
+    <div>
+      See console log for details!
+    </div>
+  
+  </body>
+</html>
