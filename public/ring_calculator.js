@@ -1,3 +1,5 @@
+/*global d3*/
+
 async function calculateRings(total_circles, rings, circle_diameter, gap_between_circles) {
 
   let first_arc_radius = 2 * circle_diameter; // a guess to start with
@@ -51,6 +53,9 @@ async function calculateRings(total_circles, rings, circle_diameter, gap_between
           `So, I'm subtracting the difference from the last ring,\nwhich gives you: ${rows_array}`
         );
       }
+      
+      d3.select("#answer")
+      .html(`Ring array is: [${rows_array}]`)
       
       return rows_array
       
