@@ -55,7 +55,7 @@ async function main() {
     ["angle", "radius"],
     ["asc", "desc"]
   );
-
+  
   //// prep the content data ////
 
   // presumably, we have the same number of data points to chart as we do
@@ -88,11 +88,11 @@ async function main() {
   }
 
   const color = d => {
-    return "#7b42f5"; // just return purple
+    return "#336b42" // just return green
   };
 
   function interiorFill(d) {
-    if (d !== "") {
+    if (d < 0) {   // this never happens as written, but I can tinker with the logic to display solid colors
       return "rgba(255, 255, 255, 0.0)";
     } else {
       return "rgba(255, 255, 255, 0.9)"; // 90% opacity
@@ -138,7 +138,7 @@ async function main() {
     .attr("r", circle_radius - circle_border_width)
     .attr("cx", 0)
     .attr("cy", 0)
-    .attr("fill", d => interiorFill("")) // this could remove the opaque circle based on data
+    .attr("fill", (d, i) => interiorFill(i)) // this could remove the opaque circle based on data
     .append("svg:title")
     .text(d => d);
 }
