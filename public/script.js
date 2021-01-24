@@ -8,20 +8,20 @@ async function main() {
   let total_circles = document.getElementById("form_circles").value
   let rings = document.getElementById("form_rings").value
   
-  let circle_radius = 10; // for each circle in pixels
+  let circle_radius = 10
+  ; // for each circle in pixels
   let circle_border_width = 1; // this will be the width of circle rule
   const gap = 2; // gap between circles, in pixels
 
   const circle_diameter = circle_radius * 2;
   
   const arc_counts = await calculateRings(total_circles, rings, circle_diameter, gap);
-  // const arc_counts = [27, 30, 33, 37, 40, 43, 46, 50, 53, 56, 59, 64] // 538
-  // const arc_counts = [16, 18, 20, 22, 24] // 100, senate
+  // const arc_counts = [28,31,34,37,40,43,46,50,53,56,59,61] // 538
 
   //// prep the positioning data ////
   
   const first_ring_radius =
-    ((circle_diameter + gap) * (arc_counts[1] - 1)) / Math.PI; // 1/2 circumference / pi (c=2πr)
+    ( (circle_diameter + gap) * (arc_counts[1]) ) / Math.PI; // 1/2 circumference / pi (c=2πr)
   let circle_positions = [];
   
   // this steps through each ring
